@@ -9,6 +9,8 @@ time=`date`
 
 echo `date`>>commit.txt
 echo "************************************">>commit.txt
+
+echo `cat commit.txt`>>note.log
 clear
 
 if [ -f "note.c" ]
@@ -30,4 +32,5 @@ echo 2222222222222
 git add note.c
 git add note.out
 git add cpt2
+git add note.log
 git commit -F commit.txt
