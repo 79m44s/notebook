@@ -32,7 +32,12 @@ echo 2222222222222
 
 gcc main.c -L. -lnote -o main
 
-echo `export LD_LIBRARY_PATH=.`
+`export LD_LIBRARY_PATH=.`
+if [ $? != 0 ]
+then
+	echo export fail
+	exit 1
+fi
 
 ./main
 
