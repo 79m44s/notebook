@@ -39,6 +39,7 @@ then
 	exit 1
 fi
 
+./main
 
 
 git add note.c
