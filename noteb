@@ -48,9 +48,8 @@ function commit
 
 addlog
 makelib
-commit
 
 ./main
 
-
+commit
 
