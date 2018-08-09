@@ -8,6 +8,7 @@ cp /mnt/hgfs/sharewl/commit.txt commit.txt
 time=`date`
 
 echo `date`>>commit.txt
+echo "************************************">>commit.txt
 clear
 
 if [ -f "note.c" ]
