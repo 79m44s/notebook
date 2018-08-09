@@ -1,0 +1,56 @@
+#!/bin/bash
+
+clear
+
+function addlog
+{
+	time=`date`
+	echo `date`>>commit.txt
+	echo "************************************">>commit.txt
+	echo `cat commit.txt`>>note.log
+}
+
+
+function makelib
+{
+	echo 1111111111111
+	
+	make
+
+	if [ $? != 0 ]
+	then
+		echo gcc failed
+		exit 1
+	fi
+	echo 2222222222222
+
+	gcc main.c -L. -lnote -o main
+	
+	if [ $? != 0 ]
+	then
+		echo export fail
+		exit 1
+	fi
+	
+	export LD_LIBRARY_PATH=.
+}
+
+function commit
+{
+	git add note.c
+	git add note.h
+	git add noteb
+	git add libnote.so
+	git add main.c
+	git add note.log
+	git commit -F commit.txt
+}
+
+addlog
+makelib
+commit
+
+./main
+
+
+
