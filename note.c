@@ -27,8 +27,8 @@ int createFile()
         return 0;
     }
 
-    printf("fd = %d\n",fd);
-    
+   // printf("fd = %d\n",fd);
+    printf("请输入内容:\n");
     return fd;
 }
 

@@ -22,7 +22,7 @@ function makelib
 		echo gcc failed
 		exit 1
 	fi
-	echo 2222222222222
+	echo "请输入文件名："
 
 	gcc main.c -L. -lnote -o main
 	
