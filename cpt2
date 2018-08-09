@@ -23,6 +23,7 @@ echo 1111111111111
 
 make
 
+`export LD_LIBRARY_PATH=.`
 if [ $? != 0 ]
 then
 	echo gcc failed
