@@ -28,7 +28,7 @@ int createFile()
     }
 
    // printf("fd = %d\n",fd);
-    printf("请输入内容:\n");
+    printf("请输入内容(ESC+ENTER退出编辑):\n");
     return fd;
 }
 
