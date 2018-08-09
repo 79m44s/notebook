@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ -f "commit.txt" ]
+then 
+	`rm commit.txt`
+fi
+cp /mnt/hgfs/sharewl/commit.txt commit.txt
+time=`date`
+
+echo `date`>>commit.txt
+clear
+
+if [ -f "note.c" ]
+then
+	`rm note.c`
+fi
+cp /mnt/hgfs/sharewl/note.c note.c
+echo 1111111111111
+`gcc -o note.out note.c`
+
+if [ $? != 0 ]
+then
+	echo gcc failed
+	exit 1
+fi
+echo 2222222222222
+./note.out
+
+git add note.c
+git add note.out
+git add cpt2
+git commit -F commit.txt
