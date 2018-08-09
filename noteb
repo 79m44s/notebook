@@ -43,6 +43,7 @@ function commit
 	git add libnote.so
 	git add main.c
 	git add note.log
+	git add README.md
 	git commit -F commit.txt
 }
 
