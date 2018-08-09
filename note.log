@@ -10,3 +10,4 @@
 ﻿修改人：苏小波  目前功能描述：记录输入字符串并保存到指定文件，ESC退出编辑  提交原因：增加日志文件note.log  输出文件：test  缺陷：无法识别方向键，无法移动光标  计划：加入curses库来识别方向键，改用fopen、fwrite、fseek  时间：Thu Aug 9 02:51:46 PDT 2018 commit.txt cpt cpt2 note.log README.md
 ﻿修改人：苏小波  目前功能描述：记录输入字符串并保存到指定文件，ESC退出编辑  提交原因：增加日志文件note.log  输出文件：test  缺陷：无法识别方向键，无法移动光标  计划：加入curses库来识别方向键，改用fopen、fwrite、fseek  时间：Thu Aug 9 18:00:15 PDT 2018 commit.txt cpt cpt2 note.c note.log README.md
 ﻿修改人：苏小波  目前功能描述：记录输入字符串并保存到指定文件，ESC退出编辑  提交原因：增加日志文件note.log  输出文件：test  缺陷：无法识别方向键，无法移动光标  计划：加入curses库来识别方向键，改用fopen、fwrite、fseek  时间：Thu Aug 9 18:00:52 PDT 2018 commit.txt cpt cpt2 Makefile note.c note.h note.log README.md
+﻿修改人：苏小波  目前功能描述：记录输入字符串并保存到指定文件，ESC退出编辑  提交原因：加入Makefile文件，编译libnote.so动态库  缺陷：无法识别方向键，无法移动光标  计划：加入curses库来识别方向键，改用fopen、fwrite、fseek  时间：Thu Aug 9 03:10:05 PDT 2018 a asda commit.txt cpt cpt2 libnote.so main main.c Makefile note.c note.h note.log note.o README.md
