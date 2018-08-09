@@ -30,6 +30,8 @@ then
 fi
 echo 2222222222222
 
+gcc main.c -L. -lnote -o main
+
 `export LD_LIBRARY_PATH=.`
 
 git add note.c
