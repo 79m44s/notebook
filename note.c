@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<fcntl.h>
+#include<curses.h>
 
 #define FLAG O_CREAT | O_RDWR 
 
