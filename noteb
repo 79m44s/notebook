@@ -24,7 +24,7 @@ function makelib
 	fi
 	echo "请输入文件名："
 
-	gcc main.c -L. -lnote -o main
+	gcc main.c -L. -lnote -o main.o
 	
 	if [ $? != 0 ]
 	then
@@ -50,7 +50,7 @@ function commit
 addlog
 makelib
 
-./main
+./main.o
 
 commit
 
