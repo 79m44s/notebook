@@ -4,9 +4,9 @@ clear
 
 function addlog
 {
-	time=`date`
+	#time=`date`
 	echo `date`>>commit.txt
-	echo "************************************">>commit.txt
+	echo "11111111111111111111">>commit.txt
 	echo `cat commit.txt`>>note.log
 }
 
