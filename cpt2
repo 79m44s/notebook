@@ -5,8 +5,8 @@ then
 	`rm commit.txt`
 fi
 cp /mnt/hgfs/sharewl/commit.txt commit.txt
-time=`date`
 
+time=`date`
 echo `date`>>commit.txt
 echo "************************************">>commit.txt
 
@@ -18,8 +18,10 @@ then
 	`rm note.c`
 fi
 cp /mnt/hgfs/sharewl/note.c note.c
+cp /mnt/hgfs/sharewl/note.h note.h
 echo 1111111111111
-`gcc -o note.out note.c`
+
+make
 
 if [ $? != 0 ]
 then
@@ -27,10 +29,8 @@ then
 	exit 1
 fi
 echo 2222222222222
-./note.out
 
 git add note.c
-git add note.out
 git add cpt2
 git add note.log
 git commit -F commit.txt
