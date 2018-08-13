@@ -3,22 +3,23 @@
 clear
 
 function addlog
-{
-	#time=`date`
+{	
 	rm commit.txt
 	touch commit.txt
-	echo "修改人："
-	read name
-	echo $name>>commit.txt
-	echo "修改原因："
-	read reason
-	echo $reason>>commit.txt
-	echo "目前缺陷："
-	read bug
-	echo $bug>>commit.txt
-	echo "时间：" 
+	
+	read -p "修改人：" name
+	echo "修改人：$name">>commit.txt
+	
+	read -p "修改原因：" reason
+	echo "修改原因：$reason">>commit.txt
+	
+	
+	read -p "目前缺陷：" bug
+	echo "目前缺陷：$bug">>commit.txt
+	
 	echo `date`>>commit.txt
-	echo "\n11111111111111111111">>commit.txt
+	echo "*****************************">>commit.txt
+	
 	echo `cat commit.txt`>>note.log
 }
 
@@ -31,7 +32,7 @@ function makelib
 
 	if [ $? != 0 ]
 	then
-		echo gcc failed
+		echo gcc libnote failed
 		exit 1
 	fi
 	echo "请输入文件名："
@@ -40,7 +41,7 @@ function makelib
 	
 	if [ $? != 0 ]
 	then
-		echo export fail
+		echo gcc main.c fail
 		exit 1
 	fi
 	
@@ -54,6 +55,7 @@ function commit
 	git add noteb
 	git add libnote.so
 	git add main.c
+	git add commit.txt
 	git add note.log
 	git add Makefile
 	git add README.md
@@ -65,7 +67,7 @@ makelib
 
 ./main.o
 
-echo "commit or not:y/n"
+echo -n "commit or not:y/n"
 read ret
 if [ $ret = y -o $ret = Y  ]
 then

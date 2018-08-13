@@ -1,1 +1,1 @@
-苏小波 gemg更改脚本，添加编译时间，修改追加时间过多的bug 无法识别方向键，删除键 Mon Aug 13 09:51:19 CST 2018 \n11111111111111111111
+修改人：suxiaobo 修改原因：更改脚本，添加判断提交与否的提示信息 目前缺陷：无法识别方向键， Mon Aug 13 10:16:53 CST 2018 a asdada commit.txt cpt2 libnote.so main.c main.o Makefile noteb note.c note.h note.log note.o note.out README.md
