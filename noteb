@@ -5,15 +5,27 @@ clear
 function addlog
 {
 	#time=`date`
+	rm commit.txt
+	touch commit.txt
+	echo "修改人："
+	read name
+	echo $name>>commit.txt
+	echo "修改原因："
+	read reason
+	echo $reason>>commit.txt
+	echo "目前缺陷："
+	read bug
+	echo $bug>>commit.txt
+	echo "时间：" 
 	echo `date`>>commit.txt
-	echo "11111111111111111111">>commit.txt
+	echo "\n11111111111111111111">>commit.txt
 	echo `cat commit.txt`>>note.log
 }
 
 
 function makelib
 {
-	echo 1111111111111
+	echo "编译时间为："`date`
 	
 	make
 
@@ -48,10 +60,16 @@ function commit
 	git commit -F commit.txt
 }
 
-addlog
+
 makelib
 
 ./main.o
 
-commit
+echo "commit or not:y/n"
+read ret
+if [ $ret = y -o $ret = Y  ]
+then
+	addlog
+	commit
+fi
 
