@@ -28,7 +28,7 @@ function makelib
 {
 	echo "编译时间为："`date`
 	
-	make
+	make -s
 
 	if [ $? != 0 ]
 	then
