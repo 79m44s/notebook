@@ -20,7 +20,7 @@ function addlog
 	echo `date`>>commit.txt
 	echo "*****************************">>commit.txt
 	
-	echo `cat commit.txt`>>note.log
+	cat commit.txt >> note.log
 }
 
 
