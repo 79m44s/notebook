@@ -26,17 +26,16 @@ function addlog
 
 function makelib
 {
-	echo "编译时间为："`date`
+	echo "运行时间为："`date`
 	
-	make -s
+	make
 
 	if [ $? != 0 ]
 	then
 		echo gcc libnote failed
 		exit 1
-	fi
+	fi	
 	echo "请输入文件名："
-
 	gcc main.c -L. -lnote -o main.o
 	
 	if [ $? != 0 ]
@@ -62,8 +61,14 @@ function commit
 	git commit -F commit.txt
 }
 
+if [ $# -ne 0 ]
+then
+	if [ $1 = m ]
+	then
+		makelib
+	fi
+fi
 
-makelib
 
 ./main.o
 

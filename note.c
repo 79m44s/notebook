@@ -18,8 +18,12 @@
 *************************************/
 int createFile()
 {
+    printf("libnote.so编译时间为%s %s\n", __DATE__, __TIME__);
+    
     int fd;
     char pathname[100];
+
+    printf("请输入文件名：");
     scanf("%s",pathname);
     
     if((fd=open(pathname,FLAG,MODE))==-1)
