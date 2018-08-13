@@ -67,7 +67,7 @@ makelib
 
 ./main.o
 
-echo -n "commit or not:y/n"
+echo -n "commit or not:y/n    "
 read ret
 if [ $ret = y -o $ret = Y  ]
 then
