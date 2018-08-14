@@ -15,15 +15,16 @@
 描述：根据用户输入打开或创建文件
 输入：无
 返回值：int fd--文件描述符
+
 *************************************/
 int createFile()
 {
-    printf("libnote.so编译时间为%s %s\n", __DATE__, __TIME__);
-    
     int fd;
     char pathname[100];
-
-    printf("请输入文件名：");
+    printf("libnote.so编译时间为%s %s\n", __DATE__, __TIME__);
+	
+    printf("请输入文件名：\r\n");
+    printf("1111\n");	
     scanf("%s",pathname);
     
     if((fd=open(pathname,FLAG,MODE))==-1)

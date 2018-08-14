@@ -1,6 +1,6 @@
 #!/bin/bash
 
-clear
+
 
 function addlog
 {	
@@ -26,17 +26,17 @@ function addlog
 
 function makelib
 {
-	echo "运行时间为："`date`
+	#echo "运行时间为："`date`
 	
-	make
+	make -s
 
 	if [ $? != 0 ]
 	then
 		echo gcc libnote failed
 		exit 1
 	fi	
-	echo "请输入文件名："
-	gcc main.c -L. -lnote -o main.o
+	#echo "请输入文件名："
+	gcc main.c -L. -lnote -o main2.o
 	
 	if [ $? != 0 ]
 	then
@@ -44,7 +44,8 @@ function makelib
 		exit 1
 	fi
 	
-	export LD_LIBRARY_PATH=.
+	echo "*************"
+	echo $LD_LIBRARY_PATH
 }
 
 function commit
@@ -69,8 +70,12 @@ then
 	fi
 fi
 
-
-./main.o
+libpath="$LD_LIBRARY_PATH"
+echo $libpath
+echo "**************"
+echo $libpath
+export LD_LIBRARY_PATH=.
+./main2.o
 
 echo -n "commit or not:y/n    "
 read ret
